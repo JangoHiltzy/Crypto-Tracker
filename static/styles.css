@@ -1,0 +1,142 @@
+/* COLOR PALETTE */
+:root {
+  --pearly-white: #ffffff;
+  --tungsten: #3e3e3e;
+  --background-image: url('/static/images/background.jpg');
+}
+
+/* GLOBAL STYLES */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-image: url('/static/images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'SUSE', sans-serif;
+  line-height: 1.4;
+}
+
+/* MAIN CONTENT */
+.container {
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0px;
+  color: var(--pearly-white);
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 0px;
+  color: var(--pearly-white);
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+table {
+  width: 50%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: 16px;
+  text-align: left;
+  background-color: var(--pearly-white);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.table-container {
+  max-height: 70%;
+  overflow-y: auto;
+}
+.table-container::-webkit-scrollbar {
+  width: 0;
+}
+th,
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #dddddd;
+}
+
+th {
+  background-color: var(--tungsten);
+  color: #ffffff;
+  position: sticky;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+td {
+  color: #000000;
+}
+
+/* LINKS */
+
+a:hover {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.content-wrapper {
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.center-main-text {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* FOOTER */
+footer {
+  background: var(--tungsten);
+  color: var(--pearly-white);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.socials {
+  list-style-type: none;
+  padding: 0;
+}
+
+.socials li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.socials img {
+  width: 32px;
+}
+
+.socials img:hover {
+  opacity: 0.5;
+}

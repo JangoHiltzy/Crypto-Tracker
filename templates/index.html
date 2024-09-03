@@ -1,0 +1,107 @@
+<!-- INDEX.HTML -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Tracker</title>
+
+    <!-- FAVICON FOR THE PAGE -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='images/icon.png') }}"
+    />
+
+    <!-- LINK TO GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=SUSE:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- LINK TO EXTERNAL STYLESHEET -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+
+    <!-- SOCKET.IO LIBRARY FOR REAL-TIME COMMUNICATION -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+  </head>
+  <body>
+    <h1>Crypto Tracker</h1>
+    <h2>The World's 25 Most Traded Cryptocurrencies</h2>
+
+    <!-- TABLE CONTAINER TO DISPLAY CRYPTOCURRENCY DATA -->
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price (USD)</th>
+            <th>Change (USD)</th>
+            <th>Change %</th>
+            <th>Market Cap</th>
+            <th>Circulating Supply</th>
+          </tr>
+        </thead>
+        <tbody id="crypto-table-body">
+          <!-- DATA WILL BE INSERTED HERE BY JAVASCRIPT -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2024 by Jani Hiltunen</p>
+      <ul class="socials">
+        <li>
+          <a
+            href="https://jhiltunenportfolio.netlify.app"
+            target="_blank"
+            style="margin-right: 15px; text-decoration: none"
+            title="My Portfolio Page"
+          >
+            <img
+              src="{{ url_for('static', filename='images/portfolioicon.png') }}"
+              alt="Portfolio"
+              class="social-icon"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/JangoHiltzy"
+            target="_blank"
+            style="margin-right: 15px; text-decoration: none"
+            title="My GitHub Profile"
+          >
+            <img
+              src="{{ url_for('static', filename='images/githubicon.png') }}"
+              alt="GitHub"
+              class="social-icon"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/hiltzy/"
+            target="_blank"
+            style="margin-right: 15px; text-decoration: none"
+            title="My LinkedIn Profile"
+          >
+            <img
+              src="{{ url_for('static', filename='images/linkedinicon.png') }}"
+              alt="LinkedIn"
+              class="social-icon"
+            />
+          </a>
+        </li>
+      </ul>
+    </footer>
+    <!-- IMPORTING JAVASCRIPT-->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
